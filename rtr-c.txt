@@ -1,15 +1,4 @@
 !
-interface Port-channel1
- description --==C-49-INET==--
- switchport
- switchport trunk encapsulation dot1q
- switchport trunk allowed vlan 330
- switchport mode trunk
- mtu 9216
- mls qos vlan-based
- hold-queue 4096 in
- hold-queue 4096 out
-!
 interface GigabitEthernet1/1
  no ip address
  shutdown
