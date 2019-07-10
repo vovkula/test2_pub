@@ -1,0 +1,203 @@
+!
+interface Port-channel1
+ description --==C-49-INET==--
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 330
+ switchport mode trunk
+ mtu 9216
+ mls qos vlan-based
+ hold-queue 4096 in
+ hold-queue 4096 out
+!
+interface GigabitEthernet1/1
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/1
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/2
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/3
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/4
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/5
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/6
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/7
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/8
+ description IPTV (MVPN)
+ mtu 9216
+ ip vrf forwarding mcast
+ ip address 172.16.242.1 255.255.255.252
+ ip mtu 1500
+ ip pim sparse-dense-mode
+ load-interval 30
+ no snmp trap link-status
+ no cdp enable
+ hold-queue 1024 in
+ hold-queue 1024 out
+!
+interface GigabitEthernet2/9
+ description -== NAT (Billing) ==-
+ switchport
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 230
+ switchport mode trunk
+ mtu 9216
+ load-interval 30
+ no snmp trap link-status
+ no cdp enable
+!
+interface GigabitEthernet2/10
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/11
+ description VoIP from Lviv
+ mtu 9216
+ no ip address
+ load-interval 30
+ shutdown
+ no snmp trap link-status
+ mls qos trust dscp
+ no cdp enable
+!
+interface GigabitEthernet2/12
+ description FC1 NIC2
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/13
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/14
+ description FC1 MGMT
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/15
+ description FC2 MGMT
+ switchport
+ switchport access vlan 230
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/16
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/17
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/18
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/19
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/20
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/21
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/22
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/23
+ no ip address
+ no snmp trap link-status
+!
+interface GigabitEthernet2/24
+ switchport
+ switchport access vlan 202
+ switchport mode access
+ no snmp trap link-status
+!
+interface GigabitEthernet2/25
+ no ip address
+ no snmp trap link-status
+!
+interface GigabitEthernet2/26
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/27
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/28
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/29
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
+interface GigabitEthernet2/30
+ no ip address
+ shutdown
+ no snmp trap link-status
+!
